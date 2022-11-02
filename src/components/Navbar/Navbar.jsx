@@ -4,20 +4,25 @@ import CartWidget from './CartWidget';
 import {Link} from "react-router-dom";
 
 function Navbar() {
+
+    
   return (
     <header style={style.header}>
         <Link to= "/">
             <h2 style={style.logo}>Ecommerce <span style={style.span}>JR</span></h2>
         </Link>
         <nav>
-            <Link to="/">
+            <Link to="/category/jewelery" key={0}>
                 <a href='' style={style.a}>Joyeria</a>
             </Link>
-            <Link to="/">
+            <Link to="/category/electronics" key={1}>
                 <a href='' style={style.a}>Electronica</a>
             </Link>
-            <Link to="/">
-                <a href='' style={style.a}>Ropa</a>
+            <Link to="/category/men's clothing" key={2}>
+                <a href='' style={style.a}>Ropa masculina</a>
+            </Link>
+            <Link to="/category/women's clothing" key={3}>
+                <a href='' style={style.a}>Ropa femenina</a>
             </Link>
             
         </nav>
